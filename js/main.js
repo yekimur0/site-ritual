@@ -15089,6 +15089,43 @@ const swiper_products = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.pro
     }
   }
 });
+const swiper_single = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".single-swiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+const swiper_single_second = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".single-swiper-second", {
+  spaceBetween: 10,
+  navigation: {
+    prevEl: ".slider-1 .slider-1-prev",
+    nextEl: ".slider-1 .slider-1-next"
+  },
+  thumbs: {
+    swiper: swiper_single
+  }
+});
+const swiper_products_views = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.views-products-swiper', {
+  spaceBetween: 20,
+  navigation: {
+    prevEl: '.products-section-slider .view-prev',
+    nextEl: '.products-section-slider .view-next'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 4
+    },
+    1200: {
+      slidesPerView: 5
+    }
+  }
+});
 
 
 
@@ -15112,6 +15149,7 @@ setAttributeTabs(informationBtn, informationTabs, 'info');
 _fancyapps_ui__WEBPACK_IMPORTED_MODULE_6__.Fancybox.bind('[data-fancybox="gallery-rent"]', {});
 _fancyapps_ui__WEBPACK_IMPORTED_MODULE_6__.Fancybox.bind('[data-fancybox="gallery-about"]', {});
 _fancyapps_ui__WEBPACK_IMPORTED_MODULE_6__.Fancybox.bind('[data-fancybox="examples"]', {});
+_fancyapps_ui__WEBPACK_IMPORTED_MODULE_6__.Fancybox.bind('[data-fancybox="single-gallery"]', {});
 
 const slider = document?.getElementById('price-slider');
 if (slider) {
@@ -15261,6 +15299,7 @@ __webpack_require__.r(__webpack_exports__);
 const listener = () => {
   document.body.addEventListener('click', e => {
     let target = e.target;
+    console.log(target);
     if (target.classList.contains('tabs__btn')) changeTabPrice(target);
     if (target.classList.contains('information__btn')) changeTabInfo(target);
     if (target.dataset.accordionItem) initAccordion(target);
@@ -15269,6 +15308,36 @@ const listener = () => {
     if (target.classList.contains('sub-item')) openMobileMenu(target);
     if (target.classList.contains('modal__close') || target.classList.contains('modal--active')) {
       document.querySelector('.modal--active').classList.remove('modal--active');
+    }
+    if (target.classList.contains('tab-btn')) {
+      let id = target.dataset.btnTab;
+      const el = document.querySelector(`[data-tab-info="${id}"]`);
+      const activeEl = document.querySelector('.tab._active');
+      const activeBtn = document.querySelector('.tab-btn._active');
+      if (activeEl) activeEl.classList.remove('_active');
+      if (activeBtn) activeBtn.classList.remove('_active');
+      el.classList.add('_active');
+      target.classList.add('_active');
+    }
+    if (target.classList.contains('filter-wrapper--active') || target.classList.contains('filter-close-mobile')) {
+      const filter_wrapper = document.querySelector('.filter-wrapper--active');
+      filter_wrapper.classList.remove('filter-wrapper--active');
+    }
+    if (target.classList.contains('btn-showed-filter')) {
+      const filter_wrapper = document.querySelector('.filter-wrapper');
+      filter_wrapper.classList.add('filter-wrapper--active');
+    }
+    if (target.classList.contains('close-sort-filter')) {
+      document.querySelector('.sort-filter-modal').classList.remove('modal--active');
+    }
+    if (target.classList.contains('item-filter-btn') && window.innerWidth <= 992) {
+      const sort_filter = document.getElementById('sort-filter-modal');
+      sort_filter.classList.add('modal--active');
+    }
+    if (target.dataset.openModal) {
+      let id = target.dataset.openModal;
+      const modal = document.getElementById(id);
+      modal.classList.add('modal--active');
     }
     function openMobileMenu(target) {
       const submenu = target.querySelector('.submenu-mob');
@@ -15310,6 +15379,10 @@ const listener = () => {
     }
     function initAccordion(target) {
       const activeEl = document.querySelector('.faq__item--active');
+      if (target.classList.contains('faq__item--active')) {
+        target.classList.remove('faq__item--active');
+        return;
+      }
       if (activeEl) activeEl.classList.remove('faq__item--active');
       target.classList.toggle('faq__item--active');
     }
@@ -15820,4 +15893,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
