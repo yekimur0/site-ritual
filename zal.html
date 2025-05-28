@@ -717,7 +717,7 @@
                     Наша похоронная служба работает строго в соответствии с Федеральным законом от 12.01.1996 г. № 8-ФЗ «О погребении и похоронном деле», обеспечивая юридическую прозрачность, надежность и соблюдение всех норм законодательства.
                 </div>
 
-                <button type="button" class="btn-reset btn--accent buro__btn" data-open-modal="modal-cb">Задать вопрос</button>
+                <button type="button" class="btn-reset btn--accent buro__btn" data-open-modal="modal-quest">Задать вопрос</button>
             </div>
         </div>
 
@@ -1715,7 +1715,7 @@
         </div>
     </div>
 </div>
-<div class="modal modal--active" id="modal-agent">
+<div class="modal" id="modal-agent">
     <div class="modal__container">
         <div class="modal__close">
             <svg style="pointer-events: none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1769,6 +1769,140 @@
 
             <div class="modal__img">
                 <img src="../img/angel-modal-1.webp" loading="lazy" decoding="async" width="290" height="478" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sort-filter-modal" id="sort-filter-modal">
+    <div class="sort-filter-container">
+        <div class="text-d-lg close-sort-filter">
+            Сортировка
+            <svg style="pointer-events: none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 13L13 27M13 13L27 27" stroke="#23211F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="sort-filter-list">
+            <button class="btn-reset">Сначала дешевле</button>
+            <button class="btn-reset">Сначала дороже</button>
+            <button class="btn-reset">Сначала популярные</button>
+        </div>
+
+    </div>
+</div>
+<div class="modal" id="modal-product">
+    <div class="modal__container">
+        <div class="modal__close">
+            <svg style="pointer-events: none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#23211F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="title">Заказать товар</div>
+                <div class="text-d">Оставьте заявку на заказ товара, свяжемся с вами <br/> в ближайшее время и уточним все детали</div>
+
+                <form class="modal-form" action="">
+                    <div class="modal-form-row">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Телефон">
+                    </div>
+                    <div class="modal-form-row">
+                        <button type="button" class="btn-reset btn--accent modal-form-btn">Заказать товар</button>
+                        <div class="policy">
+                            <input type="checkbox">
+                            <span>Даю согласие на обработку персональных данных </span>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="messangers">
+                    <div class="text-d-lg" style="margin-bottom: 20px;">Или свяжитесь с нами в мессенджерах</div>
+                    <div class="consult">
+                        <span>Круглосуточная консультация</span>
+                        <a href="">8-920-920-12-77</a>
+                    </div>
+                    <div class="buttons">
+                        <a class="btn--border" href="">Написать в WhatsApp
+                            <div class="icon-24">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6825 2.31043C10.4368 1.06905 8.77588 0.379395 7.02266 0.379395C3.37782 0.379395 0.425043 3.32192 0.425043 6.95411C0.425043 8.10353 0.748004 9.25296 1.30165 10.2185L0.378906 13.6208L3.88534 12.7012C4.85422 13.207 5.91537 13.4828 7.02266 13.4828C10.6675 13.4828 13.6203 10.5403 13.6203 6.90813C13.5741 5.20698 12.9282 3.55181 11.6825 2.31043ZM10.2061 9.29893C10.0677 9.66675 9.4218 10.0346 9.09884 10.0805C8.82201 10.1265 8.45292 10.1265 8.08382 10.0346C7.85313 9.94261 7.53017 9.85066 7.16108 9.66675C5.50014 8.9771 4.43898 7.32192 4.34671 7.18399C4.25443 7.09204 3.65465 6.31043 3.65465 5.48284C3.65465 4.65526 4.06988 4.28744 4.20829 4.10353C4.34671 3.91962 4.53125 3.91962 4.66967 3.91962C4.76194 3.91962 4.90035 3.91962 4.99263 3.91962C5.0849 3.91962 5.22331 3.87365 5.36172 4.19549C5.50014 4.51733 5.8231 5.34491 5.86923 5.39089C5.91537 5.48284 5.91537 5.5748 5.86923 5.66675C5.8231 5.75871 5.77696 5.85066 5.68468 5.94261C5.59241 6.03457 5.50013 6.1725 5.454 6.21847C5.36172 6.31043 5.26945 6.40238 5.36172 6.54031C5.454 6.72422 5.77696 7.22997 6.28447 7.68974C6.93039 8.24146 7.4379 8.42537 7.62245 8.51733C7.807 8.60928 7.89927 8.5633 7.99154 8.47135C8.08382 8.37939 8.40678 8.01158 8.49906 7.82767C8.59133 7.64376 8.72974 7.68974 8.86815 7.73572C9.00656 7.78169 9.83703 8.19549 9.97545 8.28744C10.16 8.3794 10.2523 8.42537 10.2984 8.47135C10.3445 8.60928 10.3445 8.93112 10.2061 9.29893Z" fill="white" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a class="btn--border" href="">Написать в Telegram
+                            <div class="icon-24">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7047 0.632131L11.5833 11.7075C11.5833 11.7075 11.2864 12.4753 10.471 12.1071L5.5762 8.22061L5.5535 8.20916C6.21468 7.59437 11.3417 2.82068 11.5658 2.60429C11.9127 2.26917 11.6973 2.06966 11.2946 2.32281L3.72129 7.30325L0.799537 6.28522C0.799537 6.28522 0.339739 6.11585 0.295505 5.74758C0.250689 5.3787 0.814669 5.17919 0.814669 5.17919L12.7258 0.340406C12.7258 0.340406 13.7047 -0.105018 13.7047 0.632131Z" fill="white" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__img">
+                <img src="../img/angel-modal-1.webp" loading="lazy" decoding="async" width="290" height="478" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-quest">
+    <div class="modal__container">
+        <div class="modal__close">
+            <svg style="pointer-events: none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#23211F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="title" style="text-align: left">Задать интересующий вопрос</div>
+                <div class="text-d" style="text-align: left">Напишите нам, свяжемся с вами в ближайшее время и расскажем все необходимое</div>
+
+                <form class="modal-form" action="">
+                    <div class="modal-form-row">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Телефон">
+                        <textarea  placeholder="Напишите ваш вопрос"></textarea>
+                    </div>
+                    <div class="modal-form-row">
+                        <button type="button" class="btn-reset btn--accent modal-form-btn">Заказать товар</button>
+                        <div class="policy">
+                            <input type="checkbox">
+                            <span>Даю согласие на обработку персональных данных </span>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="messangers">
+                    <div class="text-d-lg" style="margin-bottom: 20px;">Или свяжитесь с нами в мессенджерах</div>
+                    <div class="consult">
+                        <span>Круглосуточная консультация</span>
+                        <a href="">8-920-920-12-77</a>
+                    </div>
+                    <div class="buttons">
+                        <a class="btn--border" href="">Написать в WhatsApp
+                            <div class="icon-24">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6825 2.31043C10.4368 1.06905 8.77588 0.379395 7.02266 0.379395C3.37782 0.379395 0.425043 3.32192 0.425043 6.95411C0.425043 8.10353 0.748004 9.25296 1.30165 10.2185L0.378906 13.6208L3.88534 12.7012C4.85422 13.207 5.91537 13.4828 7.02266 13.4828C10.6675 13.4828 13.6203 10.5403 13.6203 6.90813C13.5741 5.20698 12.9282 3.55181 11.6825 2.31043ZM10.2061 9.29893C10.0677 9.66675 9.4218 10.0346 9.09884 10.0805C8.82201 10.1265 8.45292 10.1265 8.08382 10.0346C7.85313 9.94261 7.53017 9.85066 7.16108 9.66675C5.50014 8.9771 4.43898 7.32192 4.34671 7.18399C4.25443 7.09204 3.65465 6.31043 3.65465 5.48284C3.65465 4.65526 4.06988 4.28744 4.20829 4.10353C4.34671 3.91962 4.53125 3.91962 4.66967 3.91962C4.76194 3.91962 4.90035 3.91962 4.99263 3.91962C5.0849 3.91962 5.22331 3.87365 5.36172 4.19549C5.50014 4.51733 5.8231 5.34491 5.86923 5.39089C5.91537 5.48284 5.91537 5.5748 5.86923 5.66675C5.8231 5.75871 5.77696 5.85066 5.68468 5.94261C5.59241 6.03457 5.50013 6.1725 5.454 6.21847C5.36172 6.31043 5.26945 6.40238 5.36172 6.54031C5.454 6.72422 5.77696 7.22997 6.28447 7.68974C6.93039 8.24146 7.4379 8.42537 7.62245 8.51733C7.807 8.60928 7.89927 8.5633 7.99154 8.47135C8.08382 8.37939 8.40678 8.01158 8.49906 7.82767C8.59133 7.64376 8.72974 7.68974 8.86815 7.73572C9.00656 7.78169 9.83703 8.19549 9.97545 8.28744C10.16 8.3794 10.2523 8.42537 10.2984 8.47135C10.3445 8.60928 10.3445 8.93112 10.2061 9.29893Z" fill="white" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a class="btn--border" href="">Написать в Telegram
+                            <div class="icon-24">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7047 0.632131L11.5833 11.7075C11.5833 11.7075 11.2864 12.4753 10.471 12.1071L5.5762 8.22061L5.5535 8.20916C6.21468 7.59437 11.3417 2.82068 11.5658 2.60429C11.9127 2.26917 11.6973 2.06966 11.2946 2.32281L3.72129 7.30325L0.799537 6.28522C0.799537 6.28522 0.339739 6.11585 0.295505 5.74758C0.250689 5.3787 0.814669 5.17919 0.814669 5.17919L12.7258 0.340406C12.7258 0.340406 13.7047 -0.105018 13.7047 0.632131Z" fill="white" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__img" style="right: -60px">
+                <img src="../img/angel-cb-2.webp" loading="lazy" decoding="async" width="290" height="478" alt="">
             </div>
         </div>
     </div>
